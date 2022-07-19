@@ -1,26 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <friend-menu></friend-menu>
+    <friend-form></friend-form>
+    <friend-card></friend-card>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import FriendCard from './components/FriendCard.vue';
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { FriendCard },
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
