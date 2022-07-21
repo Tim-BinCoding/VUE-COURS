@@ -1,47 +1,20 @@
 <template>
     <div id="app">
         <div class="contianer">
-            <form @submit.prevent="addContent">
+            <form>
                 <input class="input_text" type="text" v-model="firstName" placeholder="First Name" />
                 <input class="input_text" type="text" v-model="lastName" placeholder="Last Name" />
                 <input class="input_text" type="text" v-model="description" placeholder="Content" />
                 <button type="submit">Add</button>
             </form>
-            <div class="card" v-for="(content, index) in displayContent" :key="index">
-                <h2>{{content.firstname+content.lastname}}</h2>
-                <p>{{content.description}}</p>
-            </div>
         </div>
     </div>
-    
 </template>
 
 <script>
 
 export default {
-     data(){
-            return {
-                firstName: "",
-                lastName:"",
-                description:"",
-                listContents:[]
-            }
-        },
-        methods:{
-            addContent(){
-                if(this.firstName!="" && this.lastName!="" && this.description!=""){
-                    this.listContents.push({firstname:this.firstName,lastname:this.lastName,description:this.description})
-                    this.firstName=""
-                    this.lastName=""
-                    this.description=""
-                }
-            }
-        },
-        computed:{
-            displayContent(){
-                return this.listContents;
-            }
-        }
+    
 }
 </script>
 
